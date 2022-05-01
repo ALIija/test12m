@@ -17,4 +17,6 @@ public class SakumLapa {
         frame.setLayout(null);
         frame.setVisible(true);
     }
+   
+    
 }
