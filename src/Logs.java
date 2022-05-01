@@ -1,20 +1,21 @@
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-
 public class Logs {
-    JFrame f;
-    
+
     public static void main(String[] args) throws Exception {
-        JFrame f = new JFrame("Veikals");
+     
+        ImageIcon image = new ImageIcon("load.jpg");
 
-        f.setSize(880, 450);
-        f.setLayout(null);
-        f.setVisible(true);
+        JLabel label = new JLabel();
+        label.setIcon(image);
+
+        JFrame f = new JFrame();
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
+        f.setSize(500,500);
+        f.setVisible(true);
+        f.add(label);
+}
 
-
-
-   
 }
