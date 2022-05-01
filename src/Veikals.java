@@ -10,6 +10,7 @@ public class Veikals {
 
         LoginLapa loginLapa = new LoginLapa(idparoles.getLogininfo());
 
+        
         ImageIcon image = new ImageIcon("src//loader_gif_1.gif");
 
         JLabel label = new JLabel();
