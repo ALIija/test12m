@@ -13,7 +13,8 @@ import javax.swing.JTextField;
 
 public class LoginLapa implements ActionListener {
 
-    JFrame frame = new JFrame();
+    JFrame frame = new JFrame("Loginlapa Aplis");
+    JLabel welcomLabel = new JLabel("Veikals 'Aplis'");
     JButton loginButton = new JButton("Login");
     JButton resetButton = new JButton("Reset");
     JTextField userIDField = new JTextField();
@@ -21,6 +22,7 @@ public class LoginLapa implements ActionListener {
     JLabel userIDLabel = new JLabel("userID:");
     JLabel userPasswordLabel = new JLabel("password:");
     JLabel messageLabel = new JLabel("");
+
 
     HashMap<String, String> logininfo = new HashMap<String, String>();
 
@@ -44,6 +46,10 @@ public class LoginLapa implements ActionListener {
         resetButton.setFocusable(false);
         resetButton.addActionListener(this);
 
+        welcomLabel.setBounds(140,50,200,45);
+        welcomLabel.setFont(new Font(null,Font.PLAIN,25));
+        welcomLabel.setForeground(Color.orange);
+
         frame.add(userIDLabel);
         frame.add(userPasswordLabel);
         frame.add(messageLabel);
@@ -51,6 +57,7 @@ public class LoginLapa implements ActionListener {
         frame.add(userPasswordField);
         frame.add(loginButton);
         frame.add(resetButton);
+        frame.add(welcomLabel);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(420, 420);
@@ -81,7 +88,7 @@ public class LoginLapa implements ActionListener {
                 }
             } else {
                 messageLabel.setForeground(Color.red);
-                messageLabel.setText("username not found");
+                messageLabel.setText("Username not found");
             }
         }
 
