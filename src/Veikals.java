@@ -28,6 +28,7 @@ public class Veikals {
         f.setSize(800,500);
         f.setVisible(true);
         f.add(label);
+        f.setLocation(400, 400);
         // f.add(OkButton);
         
     }
