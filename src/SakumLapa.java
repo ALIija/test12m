@@ -6,21 +6,18 @@ import javax.swing.JMenuItem;
 public class SakumLapa {
     // JLabel welcomLabel = new JLabel("Hello");
     JMenu menu, submenu;
-    JMenuItem i1, i2, i3, i4, i5;
+    JMenuItem i1, i2;
     JMenu menu1, submenu1;
     JMenuItem k1, k2, k3, k4, k5, k6;
 
     SakumLapa(String userID) {
         JFrame frame = new JFrame("Sākumlapa");
         JMenuBar mb = new JMenuBar();
-        
+
         menu = new JMenu("Pārdevēji");
-        submenu = new JMenu("Sub Menu");
-        i1 = new JMenuItem("Item 1");
-        i2 = new JMenuItem("Item 2");
-        i3 = new JMenuItem("Item 3");
-        i4 = new JMenuItem("Item 4");
-        i5 = new JMenuItem("Item 5");
+        submenu = new JMenu("visi");
+        i1 = new JMenuItem("Jaunie 1");
+        i2 = new JMenuItem("Esošie 2");
         menu1 = new JMenu("Produkti");
         submenu1 = new JMenu("Sadzīves tehnika");
         k1 = new JMenuItem("Augļi");
@@ -35,9 +32,6 @@ public class SakumLapa {
 
         menu.add(i1);
         menu.add(i2);
-        menu.add(i3);
-        submenu.add(i4);
-        submenu.add(i5);
         menu.add(submenu);
         mb.add(menu);
         frame.setJMenuBar(mb);
