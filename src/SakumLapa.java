@@ -14,7 +14,7 @@ public class SakumLapa {
         JFrame frame = new JFrame("Sākumlapa");
         JMenuBar mb = new JMenuBar();
 
-        menu = new JMenu("Pārdevēji");
+        menu = new JMenu("Darbinieki");
         submenu = new JMenu("visi");
         i1 = new JMenuItem("Jaunie 1");
         i2 = new JMenuItem("Esošie 2");
