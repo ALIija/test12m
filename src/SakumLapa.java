@@ -1,6 +1,4 @@
-import java.awt.Font;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
@@ -23,7 +21,7 @@ public class SakumLapa {
         i3 = new JMenuItem("Item 3");
         i4 = new JMenuItem("Item 4");
         i5 = new JMenuItem("Item 5");
-        menu1 = new JMenu("Kategorijas");
+        menu1 = new JMenu("Produkti");
         submenu1 = new JMenu("Sadzīves tehnika");
         k1 = new JMenuItem("Augļi");
         k2 = new JMenuItem("Dārzeņi");
