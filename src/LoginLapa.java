@@ -1,3 +1,4 @@
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -5,16 +6,20 @@ import java.awt.event.ActionListener;
 import java.util.HashMap;
 
 import javax.print.attribute.standard.ColorSupported;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
+import javax.swing.border.Border;
+import javax.swing.plaf.DimensionUIResource;
 
 public class LoginLapa implements ActionListener {
 
     JFrame frame = new JFrame("Loginlapa Aplis");
-    JLabel welcomLabel = new JLabel("Veikals 'Aplis'");
+    JLabel welcomLabel = new JLabel( new ImageIcon("src//leaf.png"));
     JButton loginButton = new JButton("Login");
     JButton resetButton = new JButton("Reset");
     JTextField userIDField = new JTextField();
@@ -22,6 +27,10 @@ public class LoginLapa implements ActionListener {
     JLabel userIDLabel = new JLabel("userID:");
     JLabel userPasswordLabel = new JLabel("password:");
     JLabel messageLabel = new JLabel("");
+    JPanel panel = new JPanel();
+    JPanel panel1 = new JPanel();
+    
+    
 
 
     HashMap<String, String> logininfo = new HashMap<String, String>();
@@ -46,9 +55,9 @@ public class LoginLapa implements ActionListener {
         resetButton.setFocusable(false);
         resetButton.addActionListener(this);
 
-        welcomLabel.setBounds(140,50,200,45);
-        welcomLabel.setFont(new Font(null,Font.PLAIN,25));
-        welcomLabel.setForeground(Color.orange);
+        welcomLabel.setBounds(140,50, 300, 350);
+        // welcomLabel.setFont(new Font(null,Font.PLAIN,25));
+        // welcomLabel.setForeground(Color.magenta);
 
         frame.add(userIDLabel);
         frame.add(userPasswordLabel);
@@ -58,12 +67,19 @@ public class LoginLapa implements ActionListener {
         frame.add(loginButton);
         frame.add(resetButton);
         frame.add(welcomLabel);
+       
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(420, 420);
-        frame.setLayout(null);
+        frame.setLayout(new BorderLayout());
         frame.setVisible(true);
         frame.setLocation(600, 400);
+        panel.setBackground(Color.orange);
+        panel.setPreferredSize(new DimensionUIResource(100, 100));
+        panel1.setBackground(Color.pink);
+        panel1.setPreferredSize(new DimensionUIResource(100, 100));
+        frame.add(panel, BorderLayout.NORTH);
+        frame.add(panel1, BorderLayout.SOUTH);
     }
 
     @Override
