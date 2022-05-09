@@ -1,10 +1,12 @@
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+import javax.swing.Action;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -13,6 +15,7 @@ import javax.swing.JPanel;
 import javax.swing.plaf.DimensionUIResource;
 
 public class SakumLapa {
+    Registracija f = new Registracija();
     JMenu menu, submenu;
     JMenuItem i1, i2;
     JMenu menu1, submenu1;
@@ -53,6 +56,7 @@ public class SakumLapa {
         k5 = new JMenuItem("Panna");
         k6 = new JMenuItem("Sadzīves ķīmija");
 
+        
 
         menu.add(i1);
         menu.add(i2);
@@ -79,10 +83,22 @@ public class SakumLapa {
         p.setBackground(Color.PINK);
         p.setPreferredSize(new DimensionUIResource(170, 600));
         frame.add(p, BorderLayout.NORTH);
+    //     i1.setFocusable(false);
+    //     i1.addActionListener(this);
         
-      
+    //     @Override
+    // public void actionPerformed(ActionEvent e) {
+    //     if (e.getSource() == i1) {
+    //         // frame.dispose();
+    //         Registracija f = new Registracija();
+
+    //     }
+        
 
     }
+      
+    
+    
     
 
 }
