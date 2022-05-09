@@ -1,14 +1,15 @@
+
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
 public class SakumLapa {
-    // JLabel welcomLabel = new JLabel("Hello");
     JMenu menu, submenu;
     JMenuItem i1, i2;
     JMenu menu1, submenu1;
     JMenuItem k1, k2, k3, k4, k5, k6;
+  
 
     SakumLapa(String userID) {
         JFrame frame = new JFrame("Sākumlapa");
@@ -26,9 +27,7 @@ public class SakumLapa {
         k4 = new JMenuItem("Zivis");
         k5 = new JMenuItem("Panna");
         k6 = new JMenuItem("Sadzīves ķīmija");
-        // welcomLabel.setBounds(0,0,200,35);
-        // welcomLabel.setFont(new Font(null,Font.PLAIN,25));
-        // welcomLabel.setText("Hello "+userID);
+
 
         menu.add(i1);
         menu.add(i2);
@@ -44,13 +43,14 @@ public class SakumLapa {
         submenu1.add(k5);
         menu1.add(submenu1);
         mb.add(menu1);
+        
         frame.setJMenuBar(mb);
-        // frame.add(welcomLabel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(420, 420);
         frame.setLayout(null);
         frame.setVisible(true);
         frame.setLocation(600, 400);
+      
 
     }
     
