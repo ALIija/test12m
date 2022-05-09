@@ -1,4 +1,6 @@
 
+import java.awt.BorderLayout;
+import java.awt.Color;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -7,12 +9,15 @@ import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JPanel;
+import javax.swing.plaf.DimensionUIResource;
 
 public class SakumLapa {
     JMenu menu, submenu;
     JMenuItem i1, i2;
     JMenu menu1, submenu1;
     JMenuItem k1, k2, k3, k4, k5, k6;
+    JPanel p = new JPanel();
   
 
     SakumLapa(String userID) {
@@ -37,8 +42,8 @@ public class SakumLapa {
 
         menu = new JMenu("Darbinieki");
         submenu = new JMenu("visi");
-        i1 = new JMenuItem("Jaunie 1");
-        i2 = new JMenuItem("Esošie 2");
+        i1 = new JMenuItem("Jaunie ");
+        i2 = new JMenuItem("Esošie ");
         menu1 = new JMenu("Produkti");
         submenu1 = new JMenu("Sadzīves tehnika");
         k1 = new JMenuItem("Augļi");
@@ -70,6 +75,10 @@ public class SakumLapa {
         frame.setLayout(null);
         frame.setVisible(true);
         frame.setLocation(600, 400);
+        frame.setLayout(new BorderLayout());
+        p.setBackground(Color.PINK);
+        p.setPreferredSize(new DimensionUIResource(170, 600));
+        frame.add(p, BorderLayout.NORTH);
         
       
 
