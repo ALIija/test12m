@@ -231,11 +231,13 @@ class Registracija
 				String data3 = "Address : " + tadd.getText();
 				tout.setText(data + data1 + data2 + data3);
 				tout.setEditable(false);
+                res.setForeground(Color.green);
 				res.setText("Registration Successfully..");
 			}
 			else {
 				tout.setText("");
 				resadd.setText("");
+                res.setForeground(Color.orange);
 				res.setText("Please accept the"
 							+ " terms & conditions..");
 			}
