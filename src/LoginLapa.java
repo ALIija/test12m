@@ -5,7 +5,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
 
-import javax.print.attribute.standard.ColorSupported;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -13,13 +12,13 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
-import javax.swing.border.Border;
 import javax.swing.plaf.DimensionUIResource;
 
 public class LoginLapa implements ActionListener {
 
-    JFrame frame = new JFrame("Loginlapa Aplis");
+    JFrame frame = new JFrame("Loginlapa SEll");
     JLabel welcomLabel = new JLabel( new ImageIcon("src//leaf.png"));
+    JLabel welcomLabel1 = new JLabel(new ImageIcon("src//logo.png"));
     JButton loginButton = new JButton("Login");
     JButton resetButton = new JButton("Reset");
     JTextField userIDField = new JTextField();
@@ -38,24 +37,25 @@ public class LoginLapa implements ActionListener {
     LoginLapa(HashMap<String, String> loginInfoOriginal) {
         logininfo = loginInfoOriginal;
 
-        userIDLabel.setBounds(50, 100, 75, 25); // x, y, weith, height
-        userPasswordLabel.setBounds(50, 150, 75, 25);
+        userIDLabel.setBounds(50, 125, 75, 25); // x, y, weith, height
+        userPasswordLabel.setBounds(50, 175, 75, 25);
 
-        messageLabel.setBounds(125, 250, 250, 35);
+        messageLabel.setBounds(125, 275, 250, 35);
         messageLabel.setFont(new Font(null, Font.ITALIC, 25));
 
-        userIDField.setBounds(125, 100, 200, 25);
-        userPasswordField.setBounds(125, 150, 200, 25);
+        userIDField.setBounds(125, 125, 200, 25);
+        userPasswordField.setBounds(125, 175, 200, 25);
 
-        loginButton.setBounds(125, 200, 100, 25);
+        loginButton.setBounds(125, 225, 100, 25);
         loginButton.setFocusable(false);
         loginButton.addActionListener(this);
 
-        resetButton.setBounds(225, 200, 100, 25);
+        resetButton.setBounds(225, 225, 100, 25);
         resetButton.setFocusable(false);
         resetButton.addActionListener(this);
 
-        welcomLabel.setBounds(140,50, 300, 350);
+        welcomLabel.setBounds(140,50, 310, 370);
+        welcomLabel1.setBounds(90,20, 250, 100);
         // welcomLabel.setFont(new Font(null,Font.PLAIN,25));
         // welcomLabel.setForeground(Color.magenta);
 
@@ -67,17 +67,17 @@ public class LoginLapa implements ActionListener {
         frame.add(loginButton);
         frame.add(resetButton);
         frame.add(welcomLabel);
-       
+        frame.add(welcomLabel1);
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(420, 420);
+        frame.setSize(450, 500);
         frame.setLayout(new BorderLayout());
         frame.setVisible(true);
         frame.setLocation(600, 400);
         panel.setBackground(Color.orange);
-        panel.setPreferredSize(new DimensionUIResource(100, 100));
+        panel.setPreferredSize(new DimensionUIResource(170, 150));
         panel1.setBackground(Color.pink);
-        panel1.setPreferredSize(new DimensionUIResource(100, 100));
+        panel1.setPreferredSize(new DimensionUIResource(100, 200));
         frame.add(panel, BorderLayout.NORTH);
         frame.add(panel1, BorderLayout.SOUTH);
     }
