@@ -53,6 +53,7 @@ public class LoginLapa implements ActionListener {
         resetButton.setBounds(225, 225, 100, 25);
         resetButton.setFocusable(false);
         resetButton.addActionListener(this);
+        resetButton.setBackground(Color.pink);
 
         welcomLabel.setBounds(140,50, 310, 370);
         welcomLabel1.setBounds(90,20, 250, 100);
