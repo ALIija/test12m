@@ -7,7 +7,9 @@ import java.io.FileReader;
 import java.io.IOException;
 
 import javax.swing.Action;
-import javax.swing.JFrame; 
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
@@ -21,7 +23,8 @@ public class SakumLapa {
     JMenu menu1, submenu1;
     JMenuItem k1, k2, k3, k4, k5, k6;
     JPanel p = new JPanel();
-  
+    JLabel welcomLabel = new JLabel(new ImageIcon("src//logo1.png"));
+    JLabel welcomLabel1 = new JLabel( new ImageIcon("src//leaf.png"));
 
     SakumLapa(String userID) {
         JFrame frame = new JFrame("Sākumlapa");
@@ -43,6 +46,8 @@ public class SakumLapa {
 
         
 
+        
+
         menu.add(i1);
         menu.add(i2);
         menu.add(submenu);
@@ -57,6 +62,7 @@ public class SakumLapa {
         submenu1.add(k5);
         menu1.add(submenu1);
         mb.add(menu1);
+        // i1.addActionListener(new ActionListener());
         
         frame.setJMenuBar(mb);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -64,14 +70,22 @@ public class SakumLapa {
         frame.setLayout(null);
         frame.setVisible(true);
         frame.setLocation(600, 400);
+        welcomLabel.setBounds(-50,70, 500, 200);
+        frame.add(welcomLabel);
+        welcomLabel1.setBounds(140,20, 310, 370);
+        frame.add(welcomLabel1);
         frame.setLayout(new BorderLayout());
-        p.setBackground(Color.PINK);
+        p.setBackground(Color.ORANGE);
         p.setPreferredSize(new DimensionUIResource(170, 600));
         frame.add(p, BorderLayout.NORTH);
-        
-    
-        
+        ;
 
+        // public void actionPerformed(ActionEvent e){  
+            
+        //     Registracija f = new Registracija();
+        //     frame.dispose(); 
+        // } ;
+    
     }
       
     // public void actionPerformed(ActionEvent e) {
