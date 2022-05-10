@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
   
-class GFG {
+class Paroles {
     final static String filePath
         = "src/IDparoles.txt";
     public static void main(String[] args)

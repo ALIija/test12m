@@ -6,7 +6,7 @@ import javax.swing.JLabel;
 public class Veikals {
     public static void main(String[] args) throws Exception {
        
-        GFG idparoles = new GFG();
+        Paroles idparoles = new Paroles();
         LoginLapa loginLapa = new LoginLapa(idparoles.HashMapFromTextFile());
 
         ImageIcon image = new ImageIcon("src//loader_gif_1.gif");
