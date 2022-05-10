@@ -7,7 +7,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 import javax.swing.Action;
-import javax.swing.JFrame;
+import javax.swing.JFrame; 
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
@@ -26,22 +26,7 @@ public class SakumLapa {
     SakumLapa(String userID) {
         JFrame frame = new JFrame("Sākumlapa");
         JMenuBar mb = new JMenuBar();
-        // try{
-        //     FileReader reader = new FileReader("src/sak.txt");
-        //     int data = reader.read();
-        //     while (data != -1) {
-        //         System.out.print((char)data);
-        //         data = reader.read();
-               
-        //     }
-        //     reader.close();
-
-        // } catch (FileNotFoundException e) {
-        //     e.printStackTrace();
-
-        // }catch(IOException e){
-        //     e.printStackTrace();
-        // }
+     
 
         menu = new JMenu("Darbinieki");
         submenu = new JMenu("visi");
@@ -74,7 +59,7 @@ public class SakumLapa {
         mb.add(menu1);
         
         frame.setJMenuBar(mb);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setSize(420, 420);
         frame.setLayout(null);
         frame.setVisible(true);
@@ -83,21 +68,16 @@ public class SakumLapa {
         p.setBackground(Color.PINK);
         p.setPreferredSize(new DimensionUIResource(170, 600));
         frame.add(p, BorderLayout.NORTH);
-    //     i1.setFocusable(false);
-    //     i1.addActionListener(this);
         
-    //     @Override
-    // public void actionPerformed(ActionEvent e) {
-    //     if (e.getSource() == i1) {
-    //         // frame.dispose();
-    //         Registracija f = new Registracija();
-
-    //     }
+    
         
 
     }
       
-    
+    // public void actionPerformed(ActionEvent e) {
+    //     if (e.getSource() == i1) {
+    //        f.getClass();
+    //     }
     
     
 
